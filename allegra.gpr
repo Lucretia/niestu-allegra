@@ -1,7 +1,7 @@
-with "../common/common";
-with "../fs_config/fs_config";
-with "../postgres-ada/pgada";
-with "../nail/nail";
+with "../niestu-jk4-common/common";
+with "../niestu-jk4-fs_config/fs_config";
+with "../samueltardieu-postgres-ada/pgada";
+with "../niestu-nail/nail";
 
 project Allegra is
    for Source_Dirs use ("source");
