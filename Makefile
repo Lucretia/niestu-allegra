@@ -8,11 +8,13 @@
 MAIN = allegra
 IDENTITY_DEF  = templates/identity.adp
 IDENTITY_SPEC = source/identity.ads
+DEBUG	=	-g -O0
+#DEBUG	= -O2
 
 all: app_ident ${MAIN}
 
 ${MAIN}:
-	gnatmake -P ${MAIN}.gpr
+	gnatmake ${DEBUG} -p -P ${MAIN}.gpr
 
 # App identity package body is produced by preprocessor
 APP_NAME   = Allegra
@@ -27,7 +29,7 @@ ${IDENTITY_SPEC}: ${IDENTITY_DEF}
 # Utility targets
 clean:
 	rm ${IDENTITY_SPEC}
-	gnatclean -P allegra
+	gnatclean -P ${MAIN}.gpr
 	rm build/identity.*
 
 # Target to create snapshot tarball
