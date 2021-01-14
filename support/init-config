@@ -1,5 +1,5 @@
 #!/bin/sh
-psql --dbname allegra --file - <<eof
+psql --dbname allegradb --file - <<eof
 
 CREATE SEQUENCE actquipnum
     INCREMENT BY 1
@@ -81,7 +81,7 @@ INSERT INTO config VALUES ('armpath',   'support/rm-idx.txt');
 INSERT INTO config VALUES ('channel',   'Ada');
 INSERT INTO config VALUES ('helppath',  'support/help-file');
 INSERT INTO config VALUES ('host',      'irc.freenode.net');
-INSERT INTO config VALUES ('lastsize',  '5');
+INSERT INTO config VALUES ('lastsize',  '15');
 INSERT INTO config VALUES ('loglevel',  'info');
 INSERT INTO config VALUES ('logpath',   '/var/log/allegra.log');
 INSERT INTO config VALUES ('nick',      'Allegra');
@@ -90,7 +90,7 @@ INSERT INTO config VALUES ('port',      '6667');
 INSERT INTO config VALUES ('quips',     '0.5');
 INSERT INTO config VALUES ('realname',  'Allegra InfoBot');
 INSERT INTO config VALUES ('shorthand', '!');
-INSERT INTO config VALUES ('shorturl',  'ada.cx');
+INSERT INTO config VALUES ('shorturl',  'tinyurl.com');
 INSERT INTO config VALUES ('username',  'allegra');
 
 INSERT INTO cmdlevels VALUES ('myaccess',    1);
